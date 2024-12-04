@@ -1,0 +1,19 @@
+@import helper._
+
+@(email: String)(implicit request: RequestHeader)
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <p>Email: @email</p>
+
+    <form action="@routes.OAuthController.logout" method="POST">
+        @CSRF.formField
+        <input type="submit" name="logout" value="logout">
+    </form>
+</body>
+
+</html>

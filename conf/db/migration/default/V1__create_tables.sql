@@ -1,0 +1,6 @@
+CREATE TABLE accounts (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    access_token VARCHAR(1023) NOT NULL,
+    expiry_time TIMESTAMP NOT NULL
+);

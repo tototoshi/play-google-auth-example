@@ -1,0 +1,17 @@
+@import helper._
+
+@(implicit request: RequestHeader)
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <form action="@routes.OAuthController.startAuthorization" method="POST">
+        @CSRF.formField
+        <input type="submit" name="login" value="login">
+    </form>
+</body>
+
+</html>
